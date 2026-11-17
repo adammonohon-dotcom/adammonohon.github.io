@@ -1,0 +1,532 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Adam Monohon</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --blue: #244B67;
+  --link: #527C96;
+  --background: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px 3%;
+  background: var(--background);
+  color: var(--blue);
+  font-family: "Lora", Georgia, serif;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+header {
+  margin-bottom: 28px;
+}
+
+h1 {
+  font-size: 1.15em;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
+p {
+  margin: 0 0 1.15em;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 4px;
+}
+
+.more {
+  color: var(--link);
+  font-style: italic;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 0.88em;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 4px;
+}
+
+/* Indent expanded sections */ 
+#exhibitions,
+#publications, 
+#info {
+	padding-left: 0px;
+}
+
+.more:hover {
+  color: var(--blue);
+}
+
+.expanded {
+  display: none;
+  margin-top: 0.65em;
+  margin-bottom: 1.2em;
+}
+
+.expanded.open {
+  display: block;
+}
+
+.expanded p {
+  margin-bottom: 0.8em;
+}
+
+.subheading {
+  font-size: 0.85em;
+  font-weight: 700;
+  margin-top: 1.4em;
+  margin-bottom: 0.5em;
+}
+
+.entry {
+  margin-bottom: 0.85em;
+}
+
+.entry-title {
+  display: block;
+}
+
+.entry-details {
+  font-size: 0.82em;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+ul {
+  padding-left: 1.25em;
+  margin-top: 0.3em;
+}
+
+li {
+  padding-left: 0.1em;
+  margin-bottom: 0.55em;
+}
+
+i, em {
+  font-style: italic;
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 20px 18px;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  header {
+    margin-bottom: 22px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+<main>
+
+<header>
+  <h1>Adam Monohon</h1>
+</header>
+
+
+<!-- BIOGRAPHY -->
+
+<p>
+Adam Monohon is an art historian, critic, and curator
+specializing in the history and theory of photography,
+Chinese art, and nineteenth-century visual and material culture. He is a PhD candidate in Art
+History at the University of California, Los Angeles
+(UCLA).
+<span class="more" onclick="toggle('bio',this)">(more)</span>
+</p>
+
+<div class="expanded" id="bio">
+  <p>
+  His dissertation, <i>Bohea Views: Photography, Landscape,and the Tea Trade in Late Qing Fujian, 1860–1888</i>, reads Lai Afong, John Thomson, and Tung Hing Studio's photographs of Fujian in relation to the coastal province's booming nineteenth-century tea trade. Attending to issues of remediation, transcultural exchange, and geographical knowledge, it asks how mercantile capitalism and the medium of photography together reshaped the ways landscape was represented, understood, and experienced in late Qing China.
+  </p>
+
+  <p>
+  His doctoral research has been supported by the
+  Bei Shan Tang Foundation, the Harvard-Yenching
+  Library, the Museum of Fine Arts, Houston, and
+  the Paul Mellon Centre for Studies in British Art,
+  among others.
+  </p>
+</div>
+
+
+<!-- EXHIBITIONS -->
+
+<p>
+Monohon has held curatorial roles at the Center for
+Creative Photography, the J. Paul
+Getty Museum, and the Los Angeles County Museum of Art.
+Exhibitions organized include <i>A/political Rocks</i>
+(2023), <i>Farewell Photography: The Hitachi Collection
+of Postwar Japanese Photographs, 1961–1989</i> (2022),
+and <i>Edward Weston's Leaves of Grass</i> (2019).
+<span class="more" onclick="toggle('exhibitions',this)">(more)</span>
+</p>
+
+<div class="expanded" id="exhibitions">
+
+  <div class="subheading">Curated</div>
+
+  <div class="entry">
+    <span class="entry-title"><i>A/political Rocks</i></span>
+    <div class="entry-details">
+      July 22, 2023 – March 24, 2024<br>
+      Henry Art Gallery, Seattle, WA
+    </div>
+  </div>
+
+  <div class="entry">
+    <span class="entry-title"><i>Edward Weston's Leaves of Grass</i></span>
+    <div class="entry-details">
+      May 11, 2019 – November 30, 2019<br>
+      Center for Creative Photography, Tucson, AZ
+    </div>
+  </div>
+
+  <div class="subheading">Co-curated</div>
+
+  <div class="entry">
+    <span class="entry-title">
+      <i>Farewell Photography: The Hitachi Collection
+      of Postwar Japanese Photographs, 1961–1989</i>
+    </span>
+    <div class="entry-details">
+      January 19, 2022 – June 26, 2022<br>
+      Phoenix Art Museum, Phoenix, AZ<br>
+      Co-curated with Audrey Sands, PhD.
+    </div>
+  </div>
+
+  <div class="entry">
+    <span class="entry-title">
+      <i>Mexican Photographers, Mexican Views</i>
+    </span>
+    <div class="entry-details">
+      December 1, 2018 – June 9, 2019<br>
+      Phoenix Art Museum, Phoenix, Arizona<br>
+      Co-curated with Rebecca Senf, PhD, and
+      Vanessa Davidson, PhD.
+    </div>
+  </div>
+
+  <div class="subheading">Assisted (selected)</div>
+
+  <div class="entry">
+    <span class="entry-title">
+      <i>Paul Mpagi Sepuya: Monsen Photography Lecture</i>
+    </span>
+    <div class="entry-details">
+      June 4, 2022 – September 5, 2022<br>
+      Henry Art Gallery, Seattle, WA<br>
+      Curated by Nina Bozicnik.
+    </div>
+  </div>
+
+  <div class="entry">
+    <span class="entry-title">
+      <i>Freedom Must Be Lived: Marion Palfi's America,
+      1940–1978</i>
+    </span>
+    <div class="entry-details">
+      July 21, 2021 – January 2, 2022<br>
+      Phoenix Art Museum, Phoenix, AZ<br>
+      Curated by Audrey Sands, PhD.
+    </div>
+  </div>
+
+  <div class="entry">
+    <span class="entry-title">
+      <i>The Qualities of LIGHT: The Story of a
+      Pioneering New York City Photography Gallery</i>
+    </span>
+    <div class="entry-details">
+      December 14, 2019 – May 30, 2020<br>
+      Center for Creative Photography, Tucson, AZ<br>
+      Curated by Rebecca Senf, PhD.
+    </div>
+  </div>
+
+  <div class="entry">
+    <span class="entry-title"><i>Ansel Adams: Examples</i></span>
+    <div class="entry-details">
+      February 23, 2019 – May 4, 2019<br>
+      Center for Creative Photography, Tucson, AZ<br>
+      Curated by Rebecca Senf, PhD.
+    </div>
+  </div>
+
+  <div class="entry">
+  <span class="entry-title">
+    <i>Richard Avedon: Relationships</i>
+  </span>
+  <div class="entry-details">
+    December 15, 2018 – May 15, 2019<br>
+    Center for Creative Photography, Tucson, AZ<br>
+    Curated by Rebecca Senf, PhD, Chief Curator,
+    Center for Creative Photography.<br>
+    Other venues: Palazzo Reale, Milan;
+    Kunsthall Rotterdam.
+  </div>
+</div>
+
+  <div class="entry">
+    <span class="entry-title">
+      <i>Icons of Style: A Century of Fashion Photography</i>
+    </span>
+    <div class="entry-details">
+      June 26, 2018 – October 21, 2018<br>
+      J. Paul Getty Museum, Los Angeles, California<br>
+      Other venue: Museum of Fine Arts, Houston.
+    </div>
+  </div>
+
+  <div class="entry">
+    <span class="entry-title">
+      <i>Paper Promises: Early American Photography</i>
+    </span>
+    <div class="entry-details">
+      February 27, 2018 – May 27, 2018<br>
+      J. Paul Getty Museum, Los Angeles, California<br>
+      Curated by Mazie Harris, PhD.
+    </div>
+  </div>
+
+  <div class="entry-details">
+  </div>
+
+</div>
+
+<!-- PUBLICATIONS -->
+
+<p>
+His writing has appeared in <i>Contemporary Art Review
+Los Angeles</i>, <i>Harvard Design Magazine</i>,
+<i>History of Photography</i>, and
+<i>Yishu: Journal of Contemporary Chinese Art</i>,
+among other venues.
+<span class="more" onclick="toggle('publications',this)">(more)</span>
+</p>
+
+<div class="expanded" id="publications">
+
+  <div class="subheading">Peer reviewed</div>
+
+  <div class="entry">
+    <span class="entry-title">
+      “The April Photography Society: A Re-Evaluation
+      of Origins, Artworks, and Aims.”
+    </span>
+    <div class="entry-details">
+      <i>Yishu: Journal of Contemporary Chinese Art</i>,
+      Vol. 16, No. 5, September/October 2017.
+    </div>
+  </div>
+
+  <div class="entry">
+    <span class="entry-title">
+      “Zhang Kechun: Photographing ‘China's Sorrow.’”
+    </span>
+    <div class="entry-details">
+      <i>Yishu: Journal of Contemporary Chinese Art</i>,
+      Vol. 15, No. 4, July/August 2016.
+    </div>
+  </div>
+
+  <div class="subheading">Non-peer reviewed</div>
+
+  <div class="entry">
+    <span class="entry-title">
+      “The Specter of Representation.”
+    </span>
+    <div class="entry-details">
+      In <i>Carla Lopez: Inquiétantes étrangetés:
+      when we were all together</i>.<br>
+      Albuquerque Contemporary Art Center, 2025.
+    </div>
+  </div>
+
+  <div class="entry">
+    <span class="entry-title">
+      “Naomi Savage: Stretching the Limits of Photography.”
+    </span>
+    <div class="entry-details">
+      <i>History of Photography</i>, February 8, 2024.
+    </div>
+  </div>
+
+  <div class="entry">
+    <span class="entry-title">
+      “Formations in American Landscape Photography.”
+    </span>
+    <div class="entry-details">
+      In <i>A/political Rocks</i>, Henry Art Gallery, 2023.
+    </div>
+  </div>
+
+  <div class="entry">
+    <span class="entry-title">
+      <i>everything was beautiful, and nothing hurt.</i>
+    </span>
+    <div class="entry-details">
+      Henry Art Gallery, 2023.
+    </div>
+  </div>
+
+  <div class="entry">
+    <span class="entry-title">
+      “The Sunshine of Yesterday.”
+    </span>
+    <div class="entry-details">
+      In <i>Joachim Froese: Echoes of Process</i>.<br>
+      Jan Manton Gallery, 2021.
+    </div>
+  </div>
+
+  <div class="entry">
+    <span class="entry-title">
+      “Leaves of Grass.”
+    </span>
+    <div class="entry-details">
+      <i>Harvard Design Magazine</i>, no. 48, S/S 2021.
+    </div>
+  </div>
+
+  <div class="subheading">Criticism</div>
+
+  <div class="entry">
+    <span class="entry-title">
+      “Exceeding the Camera's Limits: Rite: This Instant
+      at Solas Gallery Reviewed.”
+    </span>
+    <div class="entry-details">
+      <i>Variable West</i>, March 2025.
+    </div>
+  </div>
+
+  <div class="entry">
+    <span class="entry-title">
+      “Instantaneous and Durational: Chao-Chen Yang at
+      Cascadia Art Museum.”
+    </span>
+    <div class="entry-details">
+      <i>Variable West</i>, March 2024.
+    </div>
+  </div>
+
+  <div class="entry">
+    <span class="entry-title">
+      “Zarouhie Abdalian at LAXART.”
+    </span>
+    <div class="entry-details">
+      <i>Contemporary Art Review LA</i>, August 2017.
+    </div>
+  </div>
+
+  <div class="entry">
+    <span class="entry-title">
+      “Radiohalo at Blain|Southern.”
+    </span>
+    <div class="entry-details">
+      <i>Daily Serving</i>, March 2016.
+    </div>
+  </div>
+
+  <div class="entry">
+    <span class="entry-title">
+      “Mao's Golden Mangoes and the Cultural Revolution.”
+    </span>
+    <div class="entry-details">
+      <i>Daily Serving</i>, October 2014.
+    </div>
+  </div>
+
+  <div class="entry">
+    <span class="entry-title">
+      “Erica Baum at Bureau.”
+    </span>
+    <div class="entry-details">
+      <i>The Current Season</i>, October 2014.
+    </div>
+  </div>
+
+  <div class="entry">
+    <span class="entry-title">
+      “Cao Fei's ‘La Town’ at Lombard Freid Gallery.”
+    </span>
+    <div class="entry-details">
+      <i>The Current Season</i>, September 2014.
+    </div>
+  </div>
+
+  <div class="entry">
+    <span class="entry-title">
+      “Oil &amp; Water: Reinterpreting Ink.”
+    </span>
+    <div class="entry-details">
+      <i>CFCCA Curating Chinese Contemporary Network Blog</i>,
+      May 2014.
+    </div>
+  </div>
+
+  <div class="entry">
+    <span class="entry-title">
+      “Multiple Perspectives: New Works by Xie Xiaoze
+      at Chambers Fine Art.”
+    </span>
+    <div class="entry-details">
+      <i>Daily Serving</i>, March 2014.
+    </div>
+  </div>
+
+</div>
+
+<!-- CONTACT -->
+
+<p>
+For more, please email him directly
+<a href="mailto:adammonohon@gmail.com">here</a>.
+</p>
+
+</main>
+
+<script>
+function toggle(id, link) {
+  const section = document.getElementById(id);
+  const isOpen = section.classList.toggle("open");
+
+  link.textContent = isOpen ? "(less)" : "(more)";
+}
+</script>
+
+</body>
+</html>
