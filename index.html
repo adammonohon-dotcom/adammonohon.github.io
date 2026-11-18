@@ -71,15 +71,19 @@ a {
   text-underline-offset: 4px;
 }
 
-/* Indent expanded sections */ 
-#exhibitions,
-#publications, 
-#info {
-	padding-left: 0px;
-}
-
 .more:hover {
   color: var(--blue);
+}
+
+/* Indent expanded sections */
+#exhibitions,
+#publications,
+#info {
+  padding-left: 0;
+}
+
+.less {
+  display: none;
 }
 
 .expanded {
@@ -158,48 +162,54 @@ i, em {
 
 <p>
 Adam Monohon is an art historian, critic, and curator
-specializing in the history and theory of photography, Chinese art, and transcultural exchange. 
-	He is a PhD candidate in Art
-History at the University of California, Los Angeles
-(UCLA).
-<span class="more" onclick="toggle('bio',this)">(more)</span>
+specializing in the history and theory of photography, Chinese art, and transcultural exchange.
+He is a PhD candidate in Art History at the University of California, Los Angeles (UCLA).
+<span class="more" id="bio-more" role="button" tabindex="0" onclick="toggle('bio')"
+      onkeydown="toggleOnKey(event, 'bio')">(more)</span>
 </p>
 
 <div class="expanded" id="bio">
+
   <p>
-  His dissertation, <i>Bohea Views: Photography, Landscape, and the Tea Trade in Late Qing Fujian, 
-	  1860–1888</i>, reads photographs of Fujian by Lai Afong, John Thomson, and Tung Hing Studio in 
-	  relation to the coastal province's booming nineteenth-century tea trade. Attending to issues of 
-	  remediation, transcultural exchange, and geographical knowledge, it asks how mercantile capitalism 
-	  and the medium of photography together reshaped the ways landscape was represented, understood, and 
-	  experienced in late Qing China.
+  His dissertation, <i>Bohea Views: Photography, Landscape, and the Tea Trade in Late Qing Fujian,
+  1860–1888</i>, reads photographs of Fujian by Lai Afong, John Thomson, and Tung Hing Studio in
+  relation to the coastal province's booming nineteenth-century tea trade. Attending to issues of
+  remediation, transcultural exchange, and geographical knowledge, it asks how mercantile capitalism
+  and the medium of photography together reshaped the ways landscape was represented, understood, and
+  experienced in late Qing China.
   </p>
 
   <p>
-  Monohon has received support for his doctoral research from the Bei Shan Tang Foundation (2024), the 
-	  Harvard-Yenching Library (2025), the Museum of Fine Arts, Houston (2026), and the Paul Mellon Centre 
-	  for Studies in British Art (2026), among others. His study of the Chinese language has been supported 
-	  by a Critical Language Scholarship (2015), Huayu Enrichment Scholarship (2024), and Foreign Language 
-	  and Area Studies Fellowship (2024).
+  Monohon has received support for his doctoral research from the Bei Shan Tang Foundation (2024),
+  the Harvard-Yenching Library (2025), the Museum of Fine Arts, Houston (2026), and the Paul Mellon Centre
+  for Studies in British Art (2026), among others. His study of the Chinese language has been supported
+  by a Critical Language Scholarship (2015), Huayu Enrichment Scholarship (2024), and Foreign Language
+  and Area Studies Fellowship (2024).
   </p>
-His ongoing research into the work of John Yang (1933–2009) has been supported by an Ansel Adams Research 
-	Fellowship from the Center for Creative Photography (2026).
+
+  <p>
+  His ongoing research into the work of John Yang (1933–2009) has been supported by an Ansel Adams Research
+  Fellowship from the Center for Creative Photography (2026).
+  </p>
+
+  <span class="more less" role="button" tabindex="0"
+        onclick="toggle('bio')" onkeydown="toggleOnKey(event, 'bio')">(less)</span>
+
 </div>
 
 
 <!-- EXHIBITIONS -->
 
 <p>
-Monohon has held curatorial roles at the Center for
-Creative Photography (CCP), the Henry Art Gallery, and the J. Paul
-Getty Museum. Most recently, he was the Harry and Yvonne Lenart Graduate Fellow in the Wallis Annenberg 
-	Department of Photography at the Los Angeles County Museum of Art (LACMA).
+Monohon has held curatorial roles at the Center for Creative Photography (CCP), the Henry Art Gallery,
+and the J. Paul Getty Museum. Most recently, he was the Harry and Yvonne Lenart Graduate Fellow in the
+Wallis Annenberg Department of Photography at the Los Angeles County Museum of Art (LACMA).
 </p>
-Exhibitions organized include <i>A/political Rocks</i>
-(2023), <i>Farewell Photography: The Hitachi Collection
-of Postwar Japanese Photographs, 1961–1989</i> (2022),
+Exhibitions organized include <i>A/political Rocks</i> (2023),
+<i>Farewell Photography: The Hitachi Collection of Postwar Japanese Photographs, 1961–1989</i> (2022),
 and <i>Edward Weston's Leaves of Grass</i> (2019).
-<span class="more" onclick="toggle('exhibitions',this)">(more)</span>
+<span class="more" id="exhibitions-more" role="button" tabindex="0"
+      onclick="toggle('exhibitions')" onkeydown="toggleOnKey(event, 'exhibitions')">(more)</span>
 </p>
 
 <div class="expanded" id="exhibitions">
@@ -207,11 +217,11 @@ and <i>Edward Weston's Leaves of Grass</i> (2019).
   <div class="subheading">Curated</div>
 
   <div class="entry">
-    <span class="entry-title"><i>A/political Rocks</i>
-	 <a href="https://henryart.org/exhibitions/apolitical-rocks" target="_blank" rel="noopener noreferrer">
-      <i>A/political Rocks</i>
-    </a>
-	</span>
+    <span class="entry-title">
+      <a href="https://henryart.org/exhibitions/apolitical-rocks" target="_blank" rel="noopener noreferrer">
+        <i>A/political Rocks</i>
+      </a>
+    </span>
     <div class="entry-details">
       July 22, 2023 – March 24, 2024<br>
       Henry Art Gallery, Seattle, WA
@@ -219,7 +229,11 @@ and <i>Edward Weston's Leaves of Grass</i> (2019).
   </div>
 
   <div class="entry">
-    <span class="entry-title"><i>Edward Weston's Leaves of Grass</i></span>
+    <span class="entry-title">
+      <a href="https://ccp.arizona.edu/events/edward-westons-leaves-of-grass/" target="_blank" rel="noopener noreferrer">
+        <i>Edward Weston's Leaves of Grass</i>
+      </a>
+    </span>
     <div class="entry-details">
       May 11, 2019 – November 30, 2019<br>
       Center for Creative Photography, Tucson, AZ
@@ -230,8 +244,9 @@ and <i>Edward Weston's Leaves of Grass</i> (2019).
 
   <div class="entry">
     <span class="entry-title">
-      <i>Farewell Photography: The Hitachi Collection
-      of Postwar Japanese Photographs, 1961–1989</i>
+      <a href="https://phxart.org/exhibition/farewell-photography/" target="_blank" rel="noopener noreferrer">
+        <i>Farewell Photography: The Hitachi Collection of Postwar Japanese Photographs, 1961–1989</i>
+      </a>
     </span>
     <div class="entry-details">
       January 19, 2022 – June 26, 2022<br>
@@ -242,13 +257,14 @@ and <i>Edward Weston's Leaves of Grass</i> (2019).
 
   <div class="entry">
     <span class="entry-title">
-      <i>Mexican Photographers, Mexican Views</i>
+      <a href="https://phxart.org/exhibition/mexican-photographers-mexican-views/" target="_blank" rel="noopener noreferrer">
+        <i>Mexican Photographers, Mexican Views</i>
+      </a>
     </span>
     <div class="entry-details">
       December 1, 2018 – June 9, 2019<br>
       Phoenix Art Museum, Phoenix, Arizona<br>
-      Co-curated with Rebecca Senf, PhD, and
-      Vanessa Davidson, PhD.
+      Co-curated with Rebecca Senf, PhD, and Vanessa Davidson, PhD.
     </div>
   </div>
 
@@ -267,8 +283,7 @@ and <i>Edward Weston's Leaves of Grass</i> (2019).
 
   <div class="entry">
     <span class="entry-title">
-      <i>Freedom Must Be Lived: Marion Palfi's America,
-      1940–1978</i>
+      <i>Freedom Must Be Lived: Marion Palfi's America, 1940–1978</i>
     </span>
     <div class="entry-details">
       July 21, 2021 – January 2, 2022<br>
@@ -279,8 +294,7 @@ and <i>Edward Weston's Leaves of Grass</i> (2019).
 
   <div class="entry">
     <span class="entry-title">
-      <i>The Qualities of LIGHT: The Story of a
-      Pioneering New York City Photography Gallery</i>
+      <i>The Qualities of LIGHT: The Story of a Pioneering New York City Photography Gallery</i>
     </span>
     <div class="entry-details">
       December 14, 2019 – May 30, 2020<br>
@@ -290,7 +304,9 @@ and <i>Edward Weston's Leaves of Grass</i> (2019).
   </div>
 
   <div class="entry">
-    <span class="entry-title"><i>Ansel Adams: Examples</i></span>
+    <span class="entry-title">
+      <i>Ansel Adams: Examples</i>
+    </span>
     <div class="entry-details">
       February 23, 2019 – May 4, 2019<br>
       Center for Creative Photography, Tucson, AZ<br>
@@ -299,18 +315,16 @@ and <i>Edward Weston's Leaves of Grass</i> (2019).
   </div>
 
   <div class="entry">
-  <span class="entry-title">
-    <i>Richard Avedon: Relationships</i>
-  </span>
-  <div class="entry-details">
-    December 15, 2018 – May 15, 2019<br>
-    Center for Creative Photography, Tucson, AZ<br>
-    Curated by Rebecca Senf, PhD, Chief Curator,
-    Center for Creative Photography.<br>
-    Other venues: Palazzo Reale, Milan;
-    Kunsthall Rotterdam.
+    <span class="entry-title">
+      <i>Richard Avedon: Relationships</i>
+    </span>
+    <div class="entry-details">
+      December 15, 2018 – May 15, 2019<br>
+      Center for Creative Photography, Tucson, AZ<br>
+      Curated by Rebecca Senf, PhD, Chief Curator, Center for Creative Photography.<br>
+      Other venues: Palazzo Reale, Milan; Kunsthall Rotterdam.
+    </div>
   </div>
-</div>
 
   <div class="entry">
     <span class="entry-title">
@@ -319,7 +333,7 @@ and <i>Edward Weston's Leaves of Grass</i> (2019).
     <div class="entry-details">
       June 26, 2018 – October 21, 2018<br>
       J. Paul Getty Museum, Los Angeles, California<br>
-Curated by Paul Martineau.<br>
+      Curated by Paul Martineau.<br>
       Other venue: Museum of Fine Arts, Houston.
     </div>
   </div>
@@ -335,20 +349,20 @@ Curated by Paul Martineau.<br>
     </div>
   </div>
 
-  <div class="entry-details">
-  </div>
+  <span class="more less" role="button" tabindex="0"
+        onclick="toggle('exhibitions')" onkeydown="toggleOnKey(event, 'exhibitions')">(less)</span>
 
 </div>
+
 
 <!-- PUBLICATIONS -->
 
 <p>
-His writing has appeared in <i>Contemporary Art Review
-Los Angeles</i>, <i>Harvard Design Magazine</i>,
-<i>History of Photography</i>, and
-<i>Yishu: Journal of Contemporary Chinese Art</i>,
-among other venues.
-<span class="more" onclick="toggle('publications',this)">(more)</span>
+His writing has appeared in <i>Contemporary Art Review Los Angeles</i>,
+<i>Harvard Design Magazine</i>, <i>History of Photography</i>, and
+<i>Yishu: Journal of Contemporary Chinese Art</i>, among other venues.
+<span class="more" id="publications-more" role="button" tabindex="0"
+      onclick="toggle('publications')" onkeydown="toggleOnKey(event, 'publications')">(more)</span>
 </p>
 
 <div class="expanded" id="publications">
@@ -357,8 +371,7 @@ among other venues.
 
   <div class="entry">
     <span class="entry-title">
-      “The April Photography Society: A Re-Evaluation
-      of Origins, Artworks, and Aims.”
+      “The April Photography Society: A Re-Evaluation of Origins, Artworks, and Aims.”
     </span>
     <div class="entry-details">
       <i>Yishu: Journal of Contemporary Chinese Art</i>,
@@ -383,8 +396,7 @@ among other venues.
       “The Specter of Representation.”
     </span>
     <div class="entry-details">
-      In <i>Carla Lopez: Inquiétantes étrangetés:
-      when we were all together</i>.<br>
+      In <i>Carla Lopez: Inquiétantes étrangetés: when we were all together</i>.<br>
       Albuquerque Contemporary Art Center, 2025.
     </div>
   </div>
@@ -439,8 +451,7 @@ among other venues.
 
   <div class="entry">
     <span class="entry-title">
-      “Exceeding the Camera's Limits: Rite: This Instant
-      at Solas Gallery Reviewed.”
+      “Exceeding the Camera's Limits: Rite: This Instant at Solas Gallery Reviewed.”
     </span>
     <div class="entry-details">
       <i>Variable West</i>, March 2025.
@@ -449,8 +460,7 @@ among other venues.
 
   <div class="entry">
     <span class="entry-title">
-      “Instantaneous and Durational: Chao-Chen Yang at
-      Cascadia Art Museum.”
+      “Instantaneous and Durational: Chao-Chen Yang at Cascadia Art Museum.”
     </span>
     <div class="entry-details">
       <i>Variable West</i>, March 2024.
@@ -507,22 +517,24 @@ among other venues.
       “Oil &amp; Water: Reinterpreting Ink.”
     </span>
     <div class="entry-details">
-      <i>CFCCA Curating Chinese Contemporary Network Blog</i>,
-      May 2014.
+      <i>CFCCA Curating Chinese Contemporary Network Blog</i>, May 2014.
     </div>
   </div>
 
   <div class="entry">
     <span class="entry-title">
-      “Multiple Perspectives: New Works by Xie Xiaoze
-      at Chambers Fine Art.”
+      “Multiple Perspectives: New Works by Xie Xiaoze at Chambers Fine Art.”
     </span>
     <div class="entry-details">
       <i>Daily Serving</i>, March 2014.
     </div>
   </div>
 
+  <span class="more less" role="button" tabindex="0"
+        onclick="toggle('publications')" onkeydown="toggleOnKey(event, 'publications')">(less)</span>
+
 </div>
+
 
 <!-- CONTACT -->
 
@@ -534,11 +546,22 @@ For more, please email him directly
 </main>
 
 <script>
-function toggle(id, link) {
+function toggle(id) {
   const section = document.getElementById(id);
-  const isOpen = section.classList.toggle("open");
+  const moreLink = document.getElementById(id + '-more');
+  const lessLink = section.querySelector('.less');
 
-  link.textContent = isOpen ? "(less)" : "(more)";
+  const isOpen = section.classList.toggle('open');
+
+  moreLink.style.display = isOpen ? 'none' : 'inline';
+  lessLink.style.display = isOpen ? 'inline' : 'none';
+}
+
+function toggleOnKey(event, id) {
+  if (event.key === 'Enter' || event.key === ' ') {
+    event.preventDefault();
+    toggle(id);
+  }
 }
 </script>
 
